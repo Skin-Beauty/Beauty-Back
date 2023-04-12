@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Beauty Skin </title>
+    <!-- Custom fonts for this template-->
+    <link
+      href="{% static 'vendor/fontawesome-free/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/register.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      {% if user.is_authenticated %}
+      <span class="loginName">{{user.username}}님</span>
+      {% else %}
+      <span></span>
+      {% endif %}
+      <span></span>
+      {% if user.is_authenticated %}
+      &nbsp&nbsp&nbsp
+			<a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
+      <a class="headerlogin" href="{% url 'logout' %}">로그아웃</a>
+      {% else %}
+      <a class="headerlogin" href="{% url 'login' %}">로그인</a>
+      <a href="{% url 'signup' %}">회원가입</a>
+      {% endif %}
+    </header>
+    <nav class="navbar">
+      <div class="navbar_logo"><img src="../static/img/navLogo.svg" /></div>
+      <ul class="navbar_menu">
+        <li><a href="{% url 'home' %}">홈</a></li>
+        <li><a href="{% url 'poster' %}"> 추천제품</a></li>
+        <li><a href="{%url 'allcontent'%}"> 진단하기</a></li>
+      </ul>
+    </nav>
+    <div class="signupForm">
+      <img src="../static/img/navLogo.svg" />
+      <form class="user" method="POST">
+        {% csrf_token %}
+        <input class="nameinput" name="username"placeholder="이름" type="text" />
+
+        <input
+          type="text"
+          name="id"
+          class="idinput"
+          id="exampleInputEmail"
+          placeholder="아이디"
+        />
+        <input
+          type="password"
+          name="password"
+          class="pwinput"
+          id="exampleInputPassword"
+          placeholder="비밀번호"
+        />
+        <input
+          type="password"
+          name="repeat"
+          class="pwCinput"
+          id="exampleRepeatPassword"
+          placeholder="비밀번호확인"
+        />
+        <input class="emailinput" name="email" placeholder="이메일" type="email" />
+        {% comment %} <p>MBTI</p>
+        <input class="mbtiinput" name="mbti" type="text" placeholder="ISTJ" />
+        <p>선호하는 회의 방식</p>
+        <div class="meeting">
+          <input type="radio" id="meeting" name="shop" checked />
+          <label for="meeting">온라인</label>
+          <input type="radio" id="meeting2" name="shop" />
+          <label for="meeting2">오프라인</label>
+        </div>
+        <p>선호하는 피드백 방식</p>
+        <div class="feedback">
+          <input type="radio" id="feedback" name="s" checked />
+          <label for="feedback">직설적으로</label>
+          <input type="radio" id="feedback2" name="s" />
+          <label for="feedback2">우회적으로</label>
+        </div>
+        <p>선호하는 진행 방식</p>
+        <div class="select">
+          <input type="radio" id="select" name="sh" checked />
+          <label for="select">계획 철저히</label>
+          <input type="radio" id="select2" name="sh" />
+          <label for="select2">일단 시작</label>
+        </div>
+      <div class="center"></div>
+      <div class="right">
+        <p>한 줄 소개</p>
+        <input class="introInput" name="info" type="text" placeholder="나를 표현하는 한 줄을 작성하세요" />
+        <p>주요 활동</p>
+        <input class="activeinput" name="main_act" type="text" placeholder="관심이쓴 분야, 활동을 작성하세요" />
+        <input
+          type="submit"
+          class="registerbtn"
+          href="{% url 'signup' %}"
+          value="회원가입"
+        /> {% endcomment %}
+      </form>
+      <div class="goregister">
+        <h2 class="gogogo">
+          이미 계정이 있으신가요?<br /><a class="gogo" href="{% url 'login' %}"
+            >로그인하러 가기</a
+          >
+        </h2>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+  </body>
+</html>

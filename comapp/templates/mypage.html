@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty Skin</title>
+    <link rel="stylesheet" href="/static/css/my.css" />
+  </head>
+  <body>
+    <header>
+      {% if user.is_authenticated %}
+      <span class="loginName">{{user.username}}님</span>
+      {% else %}
+      <span></span>
+      {% endif %}
+      <span></span>
+      {% if user.is_authenticated %} &nbsp&nbsp&nbsp
+      <a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
+      <a class="headerlogin" href="{% url 'logout' %}">로그아웃</a>
+      {% else %}
+      <a class="headerlogin" href="{% url 'login' %}">로그인</a>
+      <a href="{% url 'signup' %}">회원가입</a>
+      {% endif %}
+    </header>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="/static/img/navLogo.svg" />
+      </div>
+      <ul class="navbar_menu">
+        <li><a href="{% url 'home' %}">홈</a></li>
+        <li><a href=""> 추천제품</a></li>
+        <li><a href=""> 진단하기</a></li>
+      </ul>
+    </nav>
+
+    <div class="form">
+      <div class="profile_image_wrapper">
+        <img src="/static/img/who.png" />
+      </div>
+      <div class="type_wrapper">
+        <h2>내 피부 MBTI</h2>
+        <span>여드름성 피부</span>
+      </div>
+      <div>
+        <button class="edit">
+          <a href="{% url 'mypageEdit' %}">프로필 수정</a>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

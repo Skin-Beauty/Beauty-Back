@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Beauty Skin </title>
+		<link rel="stylesheet" href="/static/css/mypageEdit.css" />
+	</head>
+	<body>
+		<header>
+			{% if user.is_authenticated %}
+			<span class="loginName">{{user.username}}님</span>
+			{% else %}
+			<span></span>
+			{% endif %}
+			<span></span>
+			{% if user.is_authenticated %} &nbsp&nbsp&nbsp
+			<a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
+			<a class="headerlogin" href="{% url 'logout' %}">로그아웃</a>
+			{% else %}
+			<a class="headerlogin" href="{% url 'login' %}">로그인</a>
+			<a href="{% url 'signup' %}">회원가입</a>
+			{% endif %}
+		  </header>
+		<nav class="navbar">
+			<div class="navbar_logo">
+				<img src="/static/img/navLogo.svg" />
+			</div>
+			<ul class="navbar_menu">
+				<li><a href="{% url 'home' %}">홈</a></li>
+				<li><a href=""> 추천제품</a></li>
+				<li><a href=""> 진단하기</a></li>
+			</ul>
+		</nav>
+    <div class="mypageform">
+			<div class="profile">
+				<p>프로필 수정</p>
+				<img src="/static/img/who.png" style="width: 10vw;">
+				{% if user.is_authenticated %}
+				<p>{{user.username}}님</p>
+				{% else %}
+				<span></span>
+				{% endif %}
+				<span></span>
+			</div>
+
+			<button class="finish">수정 완료</button>
+		</div>
+</html>
