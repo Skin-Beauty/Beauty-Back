@@ -11,7 +11,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>피어peer나다</title>
+    <title>Beauty Skin</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -36,9 +36,8 @@
       <span></span>
       {% endif %}
       <span></span>
-      {% if user.is_authenticated %}
-      &nbsp&nbsp&nbsp
-			<a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
+      {% if user.is_authenticated %} &nbsp&nbsp&nbsp
+      <a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
       <a class="headerlogin" href="{% url 'logout' %}">로그아웃</a>
       {% else %}
       <a class="headerlogin" href="{% url 'login' %}">로그인</a>
@@ -51,12 +50,11 @@
       </div>
       <ul class="navbar_menu">
         <li><a href="{% url 'home' %}">홈</a></li>
-        <li class="posternav"><a href="{% url 'poster' %}">공모전</a></li>
-        <li><a href="{%url 'allcontent'%}">게시판</a></li>
+        <li class="posternav"><a href="{% url 'poster' %}">진단하기 </a></li>
+        <li><a href="{%url 'allcontent'%}"> 추천제품</a></li>
       </ul>
     </nav>
-    <img class="mainImg" src="/static/img/poster.png" />
-
+    <footer><img style="width: 100%" src="/static/img/Vector.png" /></footer>
     <!-- Bootstrap core JavaScript-->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>

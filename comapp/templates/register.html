@@ -10,7 +10,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>피어peer나다</title>
+    <title>Beauty Skin </title>
     <!-- Custom fonts for this template-->
     <link
       href="{% static 'vendor/fontawesome-free/css/all.min.css' %}"
@@ -46,8 +46,8 @@
       <div class="navbar_logo"><img src="../static/img/navLogo.svg" /></div>
       <ul class="navbar_menu">
         <li><a href="{% url 'home' %}">홈</a></li>
-        <li><a href="{% url 'poster' %}">공모전</a></li>
-        <li><a href="{%url 'allcontent'%}">게시판</a></li>
+        <li><a href="{% url 'poster' %}"> 추천제품</a></li>
+        <li><a href="{%url 'allcontent'%}"> 진단하기</a></li>
       </ul>
     </nav>
     <div class="signupForm">
@@ -78,7 +78,7 @@
           placeholder="비밀번호확인"
         />
         <input class="emailinput" name="email" placeholder="이메일" type="email" />
-        <p>MBTI</p>
+        {% comment %} <p>MBTI</p>
         <input class="mbtiinput" name="mbti" type="text" placeholder="ISTJ" />
         <p>선호하는 회의 방식</p>
         <div class="meeting">
@@ -112,7 +112,7 @@
           class="registerbtn"
           href="{% url 'signup' %}"
           value="회원가입"
-        />
+        /> {% endcomment %}
       </form>
       <div class="goregister">
         <h2 class="gogogo">

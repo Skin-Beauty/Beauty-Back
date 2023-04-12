@@ -14,9 +14,8 @@
       <span></span>
       {% endif %}
       <span></span>
-      {% if user.is_authenticated %}
-      &nbsp&nbsp&nbsp
-			<a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
+      {% if user.is_authenticated %} &nbsp&nbsp&nbsp
+      <a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
       <a class="headerlogin" href="{% url 'logout' %}">로그아웃</a>
       {% else %}
       <a class="headerlogin" href="{% url 'login' %}">로그인</a>
@@ -29,8 +28,8 @@
       </div>
       <ul class="navbar_menu">
         <li><a href="{%url 'home'%}">홈</a></li>
-        <li><a href="{% url 'poster' %}">공모전</a></li>
-        <li><a href="{%url 'allcontent'%}">게시판</a></li>
+        <li><a href="{% url 'poster' %}"> 추천제품</a></li>
+        <li><a href="{%url 'allcontent'%}"> 진단하기</a></li>
       </ul>
     </nav>
     <div class="signupForm">

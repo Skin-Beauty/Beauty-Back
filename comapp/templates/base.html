@@ -11,7 +11,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>피어peer나다</title>
+    <title>Beauty Skin</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -36,9 +36,8 @@
       <span></span>
       {% endif %}
       <span></span>
-      {% if user.is_authenticated %}
-      &nbsp&nbsp&nbsp
-			<a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
+      {% if user.is_authenticated %} &nbsp&nbsp&nbsp
+      <a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
       <a class="headerlogin" href="{% url 'logout' %}">로그아웃</a>
       {% else %}
       <a class="headerlogin" href="{% url 'login' %}">로그인</a>
@@ -51,12 +50,49 @@
       </div>
       <ul class="navbar_menu">
         <li class="homenav"><a href="{% url 'home' %}">홈</a></li>
-        <li><a href="{% url 'poster' %}">공모전</a></li>
-        <li><a href="{%url 'allcontent'%}">게시판</a></li>
+        <li><a href="{% url 'poster' %}">진단하기</a></li>
+        <li><a href="{%url 'allcontent'%}">추천제품</a></li>
       </ul>
     </nav>
-    <img class="mainImg" src="./static/img/home.svg" />
-
+		<div id="category_wrapper">
+			<a href="list_cg?category=all">
+				<figure>
+					<img src="{% static 'home/icons/cosmetic.svg' %}" alt="" />
+					<figcaption>전체보기</figcaption>
+				</figure>
+			</a>
+			<a href="list_cg?category=skincare">
+				<figure>
+					<img src="{% static 'home/icons/skincare.svg' %}" alt="" />
+					<figcaption>스킨케어</figcaption>
+				</figure>
+			</a>
+			<a href="list_cg?category=mask">
+				<figure>
+					<img src="{% static 'home/icons/mask.svg' %}" alt="" />
+					<figcaption>마스크팩</figcaption>
+				</figure>
+			</a>
+      <br/>
+			<a href="list_cg?category=makeup">
+				<figure>
+					<img src="{% static 'home/icons/makeup.svg' %}" alt="" />
+					<figcaption>메이크업</figcaption>
+				</figure>
+			</a>
+			<a href="list_cg?category=suncare">
+                <figure>
+                    <img src="{% static 'home/icons/suncream.svg' %}" alt="" />
+				<figcaption>선케어<figcaption>
+                </figure>
+			</a>
+			<a href="list_cg?category=body">
+                <figure><img src="{% static 'home/icons/soap.svg' %}" alt="" />
+                    <figcaption>바디<figcaption></figure>
+			</a>
+		</div>
+    <footer><img style="width: 100%" src="/static/img/Vector.png" /></footer>
+    
     <!-- Bootstrap core JavaScript-->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>

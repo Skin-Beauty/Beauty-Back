@@ -47,7 +47,7 @@ def main_page(request):
 def mypageedit(request):
     return render(request, 'mypageEdit.html')
 
-# 익명게시판 홈페이지
+# 익명 진단하기 홈페이지
 def home(request):
     return render(request, 'base.html')#'index.html', {'posts':posts})
 
@@ -82,7 +82,7 @@ def new_comment(request, post_id):
     return redirect('detail', post_id)
 
 
-# 자유게시판 홈페이지
+# 자유 진단하기 홈페이지
 def freehome(request):
     #posts = Post.objects.all() # post의 모든 객체를 가져와라
     freeposts = FreePost.objects.filter().order_by('-date') # 날짜를 오름차순으로 가져와라 (-date : 내림차순)

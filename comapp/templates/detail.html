@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Beauty Skin</title>
     <link rel="stylesheet" href="/static/css/content.css" />
     <link rel="stylesheet" href="/static/css/homePage.css" />
     <link rel="stylesheet" href="/static/css/detail.css" />
@@ -23,9 +23,8 @@
       <span></span>
       {% endif %}
       <span></span>
-      {% if user.is_authenticated %}
-      &nbsp&nbsp&nbsp
-			<a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
+      {% if user.is_authenticated %} &nbsp&nbsp&nbsp
+      <a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
       <a class="headerlogin" href="{% url 'logout' %}">로그아웃</a>
       {% else %}
       <a class="headerlogin" href="{% url 'login' %}">로그인</a>
@@ -38,8 +37,8 @@
       </div>
       <ul class="navbar_menu">
         <li><a href="{%url 'home'%}">홈</a></li>
-        <li><a href="{% url 'poster' %}">공모전</a></li>
-        <li><a href="{%url 'allcontent'%}">게시판</a></li>
+        <li><a href="{% url 'poster' %}"> 추천제품</a></li>
+        <li><a href="{%url 'allcontent'%}"> 진단하기</a></li>
       </ul>
     </nav>
     <div class="mainbox">
@@ -71,7 +70,7 @@
         </div>
       </section>
       <section class="detail">
-        <div class="title">기획 공모전 같이 참가하실 PEER 구합니다.</div>
+        <div class="title">기획 추천제품 같이 참가하실 PEER 구합니다.</div>
         <div class="url">
           <img style="width: 10px" src="/static/img/url.png" />
           https://github.com/HERETHON1/PeerNada-Client
@@ -79,8 +78,8 @@
         <div class="date">7/26 23:25</div>
         <div class="detailcontent">
           안녕하세요. 멋사 소재 멋사 관련 학과에 재학 중인 김멋사입니다. 다수의
-          기획 공모전 관련 수상 경험이 있고, @@ 과 ## 툴 사용에 능합니다. 함께
-          열심히 관련 공모전에 참여할 팀원을 구합니다. 댓글 남겨주시면 프로필
+          기획 추천제품 관련 수상 경험이 있고, @@ 과 ## 툴 사용에 능합니다. 함께
+          열심히 관련 추천제품에 참여할 팀원을 구합니다. 댓글 남겨주시면 프로필
           확인 후 답글 달도록 하겠습니다.
         </div>
       </section>

@@ -36,9 +36,8 @@
       <span></span>
       {% endif %}
       <span></span>
-      {% if user.is_authenticated %}
-      &nbsp&nbsp&nbsp
-			<a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
+      {% if user.is_authenticated %} &nbsp&nbsp&nbsp
+      <a class="headerlogin" href="{% url 'mypage' %}">마이페이지</a>
       <a class="headerlogin" href="{% url 'logout' %}">로그아웃</a>
       {% else %}
       <a class="headerlogin" href="{% url 'login' %}">로그인</a>
@@ -51,8 +50,8 @@
       </div>
       <ul class="navbar_menu">
         <li><a href="{% url 'home' %}">홈</a></li>
-        <li><a href="">공모전</a></li>
-        <li><a href="{% url 'allcontent' %}">게시판</a></li>
+        <li><a href=""> 추천제품</a></li>
+        <li><a href="{% url 'allcontent' %}"> 진단하기</a></li>
       </ul>
     </nav>
     {% for now_user in now_users %}
@@ -104,7 +103,7 @@
               id="contenturl"
               name="contenturl"
               style="margin-bottom: 10px; width: 90%"
-              placeholder="공모전 URL"
+              placeholder=" 추천제품 URL"
             />
             <textarea
               required
@@ -127,7 +126,6 @@
               value="글 게시하기"
             /> -->
             <div><button type="submit">글 게시하기</button></div>
-            
           </form>
         </section>
       </div>

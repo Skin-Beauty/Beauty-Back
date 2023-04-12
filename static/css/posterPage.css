@@ -1,59 +1,66 @@
 .mainImg {
-	width: 100%;
-	padding: 0px;
+  width: 100%;
+  padding: 0px;
 }
 header {
-	text-align: right;
-	height: 40px;
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 14px;
-	margin-top: 20px;
+  text-align: right;
+  height: 40px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 20px;
 }
 header a:hover {
-	color: #fb9749;
+  color: #fb9749;
 }
 a {
-	text-decoration: none;
-	color: var(--text-color);
-	margin-right: 3%;
+  text-decoration: none;
+  color: var(--text-color);
+  margin-right: 3%;
 }
 .navbar {
-	display: flex;
-	background-color: #fdf6f0;
-	height: 80px;
+  display: flex;
+  background-color: #fdf6f0;
+  height: 80px;
 }
 
 .navbar_logo {
-	margin-left: 3%;
+  margin-left: 3%;
 }
 
 .navbar_menu li {
-	height: 50px;
-	width: 100px;
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 24px;
-	text-align: center;
-	margin-right: 30px;
-	margin-top: 5%;
+  height: 50px;
+  width: 100px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  margin-right: 30px;
+  margin-top: 5%;
 }
 
 .navbar_menu {
-	display: flex;
-	list-style: none;
-	margin: auto;
+  display: flex;
+  list-style: none;
+  margin: auto;
 }
 
 .navbar_menu li:hover {
-	border-bottom: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 .posternav {
-	border-bottom: 3px solid black;
+  border-bottom: 3px solid black;
 }
 .posterTem {
-	width: 100%;
+  width: 100%;
+}
+footer {
+  width: 100%;
+  height: 500px; /* footer의 높이 */
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

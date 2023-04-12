@@ -97,7 +97,7 @@ class Comment(models.Model):
     def __str__(self):
         return self.comment
 
-# 자유 게시판
+# 자유  진단하기
 class FreePost(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
