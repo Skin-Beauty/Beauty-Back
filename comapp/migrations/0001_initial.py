@@ -21,12 +21,6 @@ class Migration(migrations.Migration):
                 ('email', models.EmailField(max_length=255, unique=True, verbose_name='email')),
                 ('username', models.CharField(max_length=30, unique=True)),
                 ('id', models.CharField(max_length=30, primary_key=True, serialize=False, unique=True)),
-                ('mbti', models.CharField(max_length=5, null=True)),
-                ('meeting', models.BooleanField(null=True)),
-                ('feedback', models.BooleanField(null=True)),
-                ('ongoing', models.BooleanField(null=True)),
-                ('info', models.CharField(max_length=100, unique=True)),
-                ('main_act', models.CharField(max_length=100, unique=True)),
                 ('is_admin', models.BooleanField(default=False)),
             ],
             options={

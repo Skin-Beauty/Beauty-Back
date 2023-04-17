@@ -65,23 +65,7 @@
             />
             <div style="text-align: center"><b>{{now_user.username}}</b></div>
           </div>
-          <div class="mbti">
-            <div style="padding-top: 15px; padding-left: 15px"><b>ISTJ</b></div>
-            <div style="padding: 15px; color: #fb9749">
-              {% if now_user.meeting == True%} #온라인 {% else %} #오프라인
-              {%endif%}<br />
-              {% if now_user.feedback == True%} #직설적으로 {% else %}
-              #우회적으로 {%endif%} <br />
-              {% if now_user.ongoing == True%} #계획대로 {% else %} #일단시작
-              {%endif%}
-            </div>
-          </div>
-          <div class="oneline">
-            <div>한줄소개</div>
-            <div class="my">{{now_user.info}}</div>
-            <div>주요 활동</div>
-            <div class="my">{{now_user.main_act}}</div>
-          </div>
+
           <div class="portfolio">
             <div style="text-align: center"><b>포트폴리오</b></div>
             <img src="/static/img/portfolio.png" style="width: 5vw" />
@@ -112,40 +96,11 @@
               id="contentdetail"
               name="contentdetail"
             ></textarea>
-            <!-- <input
-              form="contentabout"
-              style="
-                border-radius: 5px;
-                width: 150px;
-                padding-left: 5px;
-                padding-right: 5px;
-                background-color: #fb9749;
-                color: white;
-              "
-              type="submit"
-              value="글 게시하기"
-            /> -->
+
             <div><button type="submit">글 게시하기</button></div>
           </form>
         </section>
       </div>
-      <!-- <div style="text-align: center">
-        <a href="{%url 'allcontent'%}">
-          <input
-            form="contentabout"
-            style="
-              border-radius: 5px;
-              width: 150px;
-              padding-left: 5px;
-              padding-right: 5px;
-              background-color: #fb9749;
-              color: white;
-            "
-            type="submit"
-            value="글 게시하기"
-          />
-        </a>
-      </div> -->
     </div>
     {%endfor%}
 
