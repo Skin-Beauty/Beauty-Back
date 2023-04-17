@@ -29,11 +29,11 @@
       </div>
       <ul class="navbar_menu">
         <li><a href="{% url 'home' %}">홈</a></li>
-        <li><a href=""> 추천제품</a></li>
-        <li><a href=""> 진단하기</a></li>
+        <li><a href="{% url 'mypage' %}"> 진단하기</a></li>
+        <li><a href="{% url 'allcontent' %}"> 추천제품</a></li>
       </ul>
     </nav>
-
+    {% if user.is_authenticated %}
     <div class="form">
       <div class="profile_image_wrapper">
         <img src="/static/img/who.png" />
@@ -44,9 +44,12 @@
       </div>
       <div>
         <button class="edit">
-          <a href="{% url 'mypageEdit' %}">프로필 수정</a>
+          <a href="{% url 'mypageEdit' %}">진단하기</a>
         </button>
       </div>
     </div>
+    {% else %}
+    <div class="form">회원가입 후 이용해 주세요</div>
+    {%endif%}
   </body>
 </html>

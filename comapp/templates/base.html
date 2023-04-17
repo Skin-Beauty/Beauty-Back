@@ -50,44 +50,44 @@
       </div>
       <ul class="navbar_menu">
         <li class="homenav"><a href="{% url 'home' %}">홈</a></li>
-        <li><a href="{% url 'poster' %}">진단하기</a></li>
+        <li><a href="{% url 'mypage' %}">진단하기</a></li>
         <li><a href="{%url 'allcontent'%}">추천제품</a></li>
       </ul>
     </nav>
 		<div id="category_wrapper">
-			<a href="list_cg?category=all">
+			<a href="poster">
 				<figure>
-					<img src="{% static 'home/icons/cosmetic.svg' %}" alt="" />
+					<img  src="/static/icons/cosmetic.svg" alt="" />
 					<figcaption>전체보기</figcaption>
 				</figure>
 			</a>
-			<a href="list_cg?category=skincare">
+			<a href="poster">
 				<figure>
-					<img src="{% static 'home/icons/skincare.svg' %}" alt="" />
+					<img  src="/static/icons/skincare.svg" alt="" />
 					<figcaption>스킨케어</figcaption>
 				</figure>
 			</a>
-			<a href="list_cg?category=mask">
+			<a href="poster">
 				<figure>
-					<img src="{% static 'home/icons/mask.svg' %}" alt="" />
+					<img  src="/static/icons/mask.svg" alt="" />
 					<figcaption>마스크팩</figcaption>
 				</figure>
 			</a>
       <br/>
-			<a href="list_cg?category=makeup">
+			<a href="poster">
 				<figure>
-					<img src="{% static 'home/icons/makeup.svg' %}" alt="" />
+					<img src="/static/icons/makeup.svg" alt="" />
 					<figcaption>메이크업</figcaption>
 				</figure>
 			</a>
-			<a href="list_cg?category=suncare">
+			<a href="poster">
                 <figure>
-                    <img src="{% static 'home/icons/suncream.svg' %}" alt="" />
+                    <img src="/static/icons/suncream.svg" alt="" />
 				<figcaption>선케어<figcaption>
                 </figure>
 			</a>
-			<a href="list_cg?category=body">
-                <figure><img src="{% static 'home/icons/soap.svg' %}" alt="" />
+			<a href="poster">
+                <figure><img  src="/static/icons/soap.svg" alt="" />
                     <figcaption>바디<figcaption></figure>
 			</a>
 		</div>
