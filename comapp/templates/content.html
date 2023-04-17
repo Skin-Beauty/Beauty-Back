@@ -50,59 +50,11 @@
       </div>
       <ul class="navbar_menu">
         <li><a href="{% url 'home' %}">홈</a></li>
-        <li><a href=""> 추천제품</a></li>
-        <li><a href="{% url 'allcontent' %}"> 진단하기</a></li>
+        <li><a href="{% url 'mypage' %}"> 진단하기</a></li>
+        <li><a href="{% url 'allcontent' %}"> 추천제품</a></li>
       </ul>
     </nav>
-    {% for now_user in now_users %}
-    <div class="contentWrite">
-      <div class="mainbox">
-        <section class="profile">
-          <div class="me">
-            <img
-              src="/static/img/who.png"
-              style="border-radius: 50%; border: 3px solid #fb9749"
-            />
-            <div style="text-align: center"><b>{{now_user.username}}</b></div>
-          </div>
-
-          <div class="portfolio">
-            <div style="text-align: center"><b>포트폴리오</b></div>
-            <img src="/static/img/portfolio.png" style="width: 5vw" />
-          </div>
-        </section>
-        <section class="contentInput">
-          <form id="contentabout" action="{% url 'create' %}" method="POST">
-            <input
-              type="text"
-              required
-              id="contenttitle"
-              name="contenttitle"
-              style="margin-bottom: 10px; width: 90%"
-              placeholder="제목"
-            />
-            <input
-              type="text"
-              required
-              id="contenturl"
-              name="contenturl"
-              style="margin-bottom: 10px; width: 90%"
-              placeholder=" 추천제품 URL"
-            />
-            <textarea
-              required
-              style="width: 90%; margin-bottom: 10px"
-              placeholder="내용을 입력해주세요"
-              id="contentdetail"
-              name="contentdetail"
-            ></textarea>
-
-            <div><button type="submit">글 게시하기</button></div>
-          </form>
-        </section>
-      </div>
-    </div>
-    {%endfor%}
+    {% for now_user in now_users %} {%endfor%}
 
     <script src="/static/js/content.js"></script>
   </body>

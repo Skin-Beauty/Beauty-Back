@@ -54,23 +54,32 @@
         <li><a href="{% url 'mypage' %}">진단하기 </a></li>
       </ul>
     </nav>
-
+    <div id="category_wrapper">
+      <figure>
+				<img  src="/static/icons/cosmetic.svg" alt="" />
+				<figcaption>전체보기</figcaption>
+			</figure>
+			<figure>
+				<img  src="/static/icons/skincare.svg" alt="" />
+				<figcaption>스킨케어</figcaption>
+			</figure>
+			<figure>
+        <img  src="/static/icons/mask.svg" alt="" />
+				<figcaption>마스크팩</figcaption>
+			</figure>
+			<figure>
+				<img src="/static/icons/makeup.svg" alt="" />
+        <figcaption>메이크업</figcaption>
+			</figure>
+      <figure>
+        <img src="/static/icons/suncream.svg" alt="" />
+				<figcaption>선케어<figcaption>
+      </figure>
+      <figure>
+        <img  src="/static/icons/soap.svg" alt="" />
+        <figcaption>바디<figcaption>
+      </figure>
+		</div>
     <footer><img style="width: 100%" src="/static/img/Vector.png" /></footer>
-    <!-- Bootstrap core JavaScript-->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
-
-    <!-- Page level plugins -->
-    <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
-    <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
   </body>
 </html>
