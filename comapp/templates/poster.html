@@ -50,10 +50,11 @@
       </div>
       <ul class="navbar_menu">
         <li><a href="{% url 'home' %}">홈</a></li>
-        <li class="posternav"><a href="{% url 'poster' %}">진단하기 </a></li>
         <li><a href="{%url 'allcontent'%}"> 추천제품</a></li>
+        <li class="posternav"><a href="{% url 'mypage' %}">진단하기 </a></li>
       </ul>
     </nav>
+
     <footer><img style="width: 100%" src="/static/img/Vector.png" /></footer>
     <!-- Bootstrap core JavaScript-->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
