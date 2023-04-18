@@ -35,46 +35,41 @@
     </nav>
     {% if user.is_authenticated %}
     <div class="form">
-      <div class="profile_image_wrapper">
-        <img src="/static/img/who.png" />
-      </div>
-      <div class="type_wrapper">
-        <h2>내 피부 MBTI</h2>
-        <span>여드름성 피부</span>
-      </div>
-      <div>
-        <label class="edit" for="chooseFile">진단하기</label>
-      </div>
-    </div>
-
-    <div id="root">
-      <h2 class="title">File Upload</h2>
+      <h2 class="title">이미지를 업로드 해주세요</h2>
       <hr />
-      <div class="contents">
-        <div class="upload-box">
-          <div id="drop-file" class="drag-file">
-            <img
-              src="https://img.icons8.com/pastel-glyph/2x/image-file.png"
-              alt="파일 아이콘"
-              class="image"
+      <div id="root">
+        <div class="contents">
+          <div class="upload-box">
+            <div id="drop-file" class="drag-file">
+              <img
+                src="https://img.icons8.com/pastel-glyph/2x/image-file.png"
+                alt="파일 아이콘"
+                class="image"
+              />
+              <p class="message">Drag files to upload</p>
+              <img src="" alt="미리보기 이미지" class="preview" />
+            </div>
+            <div class="type_wrapper">
+              <h2>내 피부 MBTI</h2>
+              <span>여드름성 피부</span>
+            </div>
+            <label class="file-label" for="chooseFile">Choose File</label>
+            <input
+              class="file"
+              id="chooseFile"
+              type="file"
+              onchange="dropFile.handleFiles(this.files)"
+              accept="image/png, image/jpeg, image/gif"
             />
-            <p class="message">Drag files to upload</p>
-            <img src="" alt="미리보기 이미지" class="preview" />
           </div>
-          <label class="file-label" for="chooseFile">Choose File</label>
-          <input
-            class="file"
-            id="chooseFile"
-            type="file"
-            onchange="dropFile.handleFiles(this.files)"
-            accept="image/png, image/jpeg, image/gif"
-          />
         </div>
       </div>
     </div>
+
     {% else %}
     <div class="form">회원가입 후 이용해 주세요</div>
     {%endif%}
+    <footer><img style="width: 100%" src="/static/img/Vector.png" /></footer>
   </body>
   <script src="/static/js/content.js"></script>
 </html>
