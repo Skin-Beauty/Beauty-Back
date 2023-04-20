@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/static/css/content.css" />
     <link rel="stylesheet" href="/static/css/homePage.css" />
+    <link rel="stylesheet" href="/static/css/content.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Beauty Skin</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -54,6 +54,41 @@
         <li><a href="{% url 'allcontent' %}"> 추천제품</a></li>
       </ul>
     </nav>
-    <script src="/static/js/content.js"></script>
+    <div id="category_wrapper">
+      <figure class="all">
+        <img  src="/static/icons/cosmetic.svg" alt="" />
+        <figcaption>전체보기</figcaption>
+			</figure>
+			<figure class="skin">
+				<img  src="/static/icons/skincare.svg" alt="" />
+				<figcaption>스킨케어</figcaption>
+			</figure>
+			<figure class="mask">
+				<img  src="/static/icons/mask.svg" alt="" />
+        <figcaption>마스크팩</figcaption>
+			</figure>
+			<figure class="makeup">
+				<img src="/static/icons/makeup.svg" alt="" />
+				<figcaption>메이크업</figcaption>
+      </figure>
+      <figure class="suncare">
+        <img src="/static/icons/suncream.svg" alt="" />
+				<figcaption>선케어<figcaption>
+      </figure>
+      <figure class="body">
+        <img  src="/static/icons/soap.svg" alt="" />
+        <figcaption>바디<figcaption>
+      </figure>
+		</div>
+
+    <div class="wrapper">
+      <div class="image"></div>
+      <div class="info">
+        <div class="company"></div>
+        <div class="name"></div>
+      </div>
+    </div>
+    <footer><img style="width: 100%" src="/static/img/Vector.png" /></footer>
+    <script src="/static/js/script.js"></script>
   </body>
 </html>
