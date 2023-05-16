@@ -87,4 +87,26 @@ category.addEventListener("click", (e) => {
 
 const allEvent = (target) => {
   if (!target.classList.contains("all")) return;
+  console.log("all");
+  const allItem = {
+    ...acneMask,
+    ...acneSkinCare,
+    ...dryMask,
+    ...drySkinCare,
+    ...oilyMask,
+  };
+  const optionBox = `${allItem
+    .map((option) => {
+      return `<div class="wrapper">
+              <div class="image"></div>
+              <div class="info">
+                <div class="company">${option.company}</div>
+                <div class="name">${option.name}</div>
+              </div>
+            </div>`;
+    })
+    .join("")}`;
+  document
+    .querySelector("#category_wrapper")
+    .insertAdjacentHTML("afterbegin", optionBox);
 };
