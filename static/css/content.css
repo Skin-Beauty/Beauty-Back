@@ -1,5 +1,6 @@
 #category_wrapper {
   margin-top: 50px;
+  margin-bottom: 100px;
   text-align: center;
 }
 figure > img {
@@ -35,6 +36,7 @@ footer {
   max-width: 700px;
   height: 130px;
   margin: auto;
+  margin-top: 50px;
 }
 .image {
   width: 110px;
