@@ -259,7 +259,7 @@ const makeupEvent = (target) => {
     .map((option) => {
       return `
       <div class="wrapper">
-        <img scr="static/data/makeup07.jpg" class="image" />
+        <img scr="/static/data/makeup07.jpg" class="image" />
         <div class="info">
           <div class="company">${option.company}</div>
           <div class="name">${option.name}</div>

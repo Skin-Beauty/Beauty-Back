@@ -37,6 +37,7 @@
     <div class="form">
       <h2 class="title">피부 유형 진단</h2>
       <hr />
+
       <div id="root">
         <div class="contents">
           <div class="upload-box">
@@ -47,6 +48,21 @@
                 class="image"
               />
               <p class="message">Drag files to upload</p>
+              <form
+                method="post"
+                class="post-form my-3"
+                enctype="multipart/form-data"
+              >
+                <div class="form-group">
+                  <input
+                    type="file"
+                    class="form-control"
+                    name="imgfile"
+                    id="imgfile"
+                  />
+                </div>
+              </form>
+
               <img src="" alt="미리보기 이미지" class="preview" />
             </div>
             <div class="type_wrapper">
