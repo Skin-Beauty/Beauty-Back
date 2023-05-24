@@ -11,12 +11,24 @@ figure > img {
   border: 1px solid #ef9d5d;
   border-radius: 20px;
 }
-figure :hover {
+figure > hover {
+  background-color: #ef9d5d;
+}
+a > img {
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  background: #ffffff;
+  border: 1px solid #ef9d5d;
+  border-radius: 20px;
+}
+a :hover {
   background-color: #ef9d5d;
 }
 figcaption {
   text-align: center;
 }
+a,
 figure {
   display: inline-block;
   background: #ffffff;
