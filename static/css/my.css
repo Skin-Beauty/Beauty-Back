@@ -169,6 +169,7 @@ a {
   width: 65%;
   border-radius: 6px;
   cursor: pointer;
+  border: none;
 }
 .contents .upload-box .file {
   display: none;

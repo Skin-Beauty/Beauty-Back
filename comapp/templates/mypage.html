@@ -33,23 +33,6 @@
         <li><a href="{% url 'allcontent' %}"> 추천제품</a></li>
       </ul>
     </nav>
-    {% block content %}
-    <div class="container">
-      <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input name="image" type="file" />
-        <br /><br />
-        <input class="btn btn-primary" type="submit" value="글 작성" />
-      </form>
-    </div>
-    <div class="container">
-      {% if post.image %}
-      <img src="{{post.image.url}}" />
-      url : {{ post.photo.url }} # /media/jeju_pic.png
-      <br /><br />
-      {% endif %}
-    </div>
-    {% endblock %}
 
     <br />
     {% if user.is_authenticated %}
@@ -67,35 +50,32 @@
                 class="image"
               />
               <p class="message">Drag files to upload</p>
-              <form
-                method="post"
-                class="post-form my-3"
-                enctype="multipart/form-data"
-              >
-                <div class="form-group">
-                  <input
-                    type="file"
-                    class="form-control"
-                    name="imgfile"
-                    id="imgfile"
-                  />
-                </div>
-              </form>
+              {% block content %}
+              <div class="container">
+                <form method="POST" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <input name="image" type="file" />
+              </div>
 
-              <img src="" alt="미리보기 이미지" class="preview" />
+              <div class="container">
+                {% if post.image %}
+                <img src="{{post.image.url}}" />
+                url : {{ post.photo.url }}
+                <br /><br />
+                <div class="type_wrapper">
+                  <h2>내 피부 MBTI</h2>
+                  <span>여드름성 피부</span>
+                </div>
+                {% endif %}
+              </div>
+              {% endblock %}
             </div>
-            <div class="type_wrapper">
-              <h2>내 피부 MBTI</h2>
-              <span>여드름성 피부</span>
-            </div>
-            <label class="file-label" for="chooseFile">Choose File</label>
             <input
-              class="file"
-              id="chooseFile"
-              type="file"
-              onchange="dropFile.handleFiles(this.files)"
-              accept="image/png, image/jpeg, image/gif"
-            />
+            class="btn btn-primary file-label"
+            type="submit"
+            value="진단하기"
+          />
+        </form>
           </div>
         </div>
       </div>
@@ -106,5 +86,4 @@
     {%endif%}
     <footer><img style="width: 100%" src="/static/img/Vector.png" /></footer>
   </body>
-  <script src="/static/js/content.js"></script>
 </html>
