@@ -73,19 +73,56 @@ const makeUp = [
     id: 1,
     name: "웨이크메이크 워터 벨벳 커버 파운데이션",
     company: "웨이크메이크",
+    image: "/static/data/makeup01.jpg",
   },
   {
     id: 2,
     name: "아워클래스 팬덤 볼류마이징 글로시 밤",
     company: "아워글래스",
+    image: "/static/data/makeup02.jpg",
   },
-  { id: 3, name: "어바웃톤 블러 파우더 팩트 기획", company: "아버웃톤" },
-  { id: 4, name: "헤라 블랙 쿠션", company: "헤라" },
-  { id: 5, name: "퓌 쿠션 글래스 리필 기획", company: "퓌" },
-  { id: 6, name: "데이지크 섀도우 팔레트", company: "데이지크" },
-  { id: 7, name: "라네즈 네오 쿠션 매트 15g", company: "라네즈" },
-  { id: 8, name: "클리오 킬커버 더뉴 파운웨어 쿠션 기획", company: "클리오" },
-  { id: 9, name: "바닐라코 프라이머 피니쉬 파우더 12g", company: "바닐라코" },
+  {
+    id: 3,
+    name: "어바웃톤 블러 파우더 팩트 기획",
+    company: "아버웃톤",
+    image: "/static/data/makeup03.jpg",
+  },
+  {
+    id: 4,
+    name: "헤라 블랙 쿠션",
+    company: "헤라",
+    image: "/static/data/makeup04.jpg",
+  },
+  {
+    id: 5,
+    name: "퓌 쿠션 글래스 리필 기획",
+    company: "퓌",
+    image: "/static/data/makeup05.jpg",
+  },
+  {
+    id: 6,
+    name: "데이지크 섀도우 팔레트",
+    company: "데이지크",
+    image: "/static/data/makeup06.jpg",
+  },
+  {
+    id: 7,
+    name: "라네즈 네오 쿠션 매트 15g",
+    company: "라네즈",
+    image: "/static/data/makeup07.jpg",
+  },
+  {
+    id: 8,
+    name: "클리오 킬커버 더뉴 파운웨어 쿠션 기획",
+    company: "클리오",
+    image: "/static/data/makeup08.jpg",
+  },
+  {
+    id: 9,
+    name: "바닐라코 프라이머 피니쉬 파우더 12g",
+    company: "바닐라코",
+    image: "/static/data/makeup09.jpg",
+  },
 ];
 
 const sunCare = [
@@ -125,7 +162,7 @@ const category = document.querySelector("#category_wrapper");
 
 const template = `
   <div class="wrapper">
-      <div class="image"></div>
+      <img class="image" src=""/>
       <div class="info">
           <div class="company"></div>
           <div class="name"></div>
@@ -158,7 +195,7 @@ const allEvent = (target) => {
   const optionBox = `${allItem
     .map((option) => {
       return `<div class="wrapper">
-                  <div class="image"></div>
+                  <img class="image" src="${option.image}"/>
                   <div class="info">
                     <div class="company">${option.company}</div>
                     <div class="name">${option.name}</div>
@@ -179,8 +216,8 @@ const skinEvent = (target) => {
   const optionBox = `${acneSkinCare
     .map((option) => {
       return `<div class="wrapper">
-                    <div class="image"></div>
-                    <div class="info">
+      <img class="image" src="${option.image}"/>
+      <div class="info">
                       <div class="company">${option.company}</div>
                       <div class="name">${option.name}</div>
                     </div>
@@ -200,8 +237,8 @@ const maskEvent = (target) => {
   const optionBox = `${acneMask
     .map((option) => {
       return `<div class="wrapper">
-                      <div class="image"></div>
-                      <div class="info">
+      <img class="image" src="${option.image}"/>
+      <div class="info">
                         <div class="company">${option.company}</div>
                         <div class="name">${option.name}</div>
                       </div>
@@ -220,13 +257,14 @@ const makeupEvent = (target) => {
   }
   const optionBox = `${makeUp
     .map((option) => {
-      return `<div class="wrapper">
-                        <div class="image"></div>
-                        <div class="info">
-                          <div class="company">${option.company}</div>
-                          <div class="name">${option.name}</div>
-                        </div>
-                      </div>`;
+      return `
+      <div class="wrapper">
+        <img scr="static/data/makeup07.jpg" class="image" />
+        <div class="info">
+          <div class="company">${option.company}</div>
+          <div class="name">${option.name}</div>
+        </div>
+      </div>`;
     })
     .join("")}`;
   document
