@@ -24,12 +24,11 @@ def logout(request):
     auth.logout(request)
     return redirect('home')
 
-
 def signup(request):
     if request.method == "POST":
         if request.POST['password'] == request.POST['repeat']:
             # 회원가입
-            new_user = User.objects.create_user(username=request.POST['username'],id=request.POST['id'],  password=request.POST['password'], email=request.POST['email'], mbti=request.POST['mbti'], meeting=True, feedback=True, ongoing=True, info=request.POST['info'], main_act=request.POST['main_act'])
+            new_user = User.objects.create_user(username=request.POST['username'],id=request.POST['id'],  password=request.POST['password'], email=request.POST['email'],)
             # 로그인
             auth.login(request, new_user)
             # 홈 리다이렉션
@@ -38,12 +37,10 @@ def signup(request):
 
 #  홈페이지
 def home(request):
-    return render(request, 'base.html')#'index.html', {'posts':posts})
-
+    return render(request, 'base.html')
 
 def mypage(request):
     return render(request,'mypage.html')
-
 
 def post(request):
     return render(request,'allcontent.html')
