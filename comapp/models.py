@@ -56,3 +56,10 @@ class User(AbstractBaseUser):
     @property
     def is_staff(self):
         return self.is_admin
+    
+# 피부타입 이미지 업로드
+class Post(models.Model):
+    image = models.ImageField(upload_to = "media/", null=True, blank=True)
+
+    def __str__(self):
+        return str(self.title)

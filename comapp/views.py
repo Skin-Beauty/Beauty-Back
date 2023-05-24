@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import User
+from .models import User,Post
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.contrib.auth.models import (BaseUserManager, AbstractBaseUser)
@@ -39,12 +39,19 @@ def signup(request):
 def home(request):
     return render(request, 'base.html')
 
-def mypage(request):
-    return render(request,'mypage.html')
-
 def post(request):
     return render(request,'allcontent.html')
 
 def addpost(request):
     return render(request,'content.html')
 
+#MYPAGE
+def mypage(request):
+    if request.method=="POST":
+        post = Post()
+        post.image = request.FILES['image']
+        post.save()
+        return redirect('/mypage',{'post':post})
+    else:
+        post = Post()
+        return render(request,'mypage.html',{'post':post})

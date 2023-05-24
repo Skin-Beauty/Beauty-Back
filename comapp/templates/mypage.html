@@ -33,6 +33,25 @@
         <li><a href="{% url 'allcontent' %}"> 추천제품</a></li>
       </ul>
     </nav>
+    {% block content %}
+    <div class="container">
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input name="image" type="file" />
+        <br /><br />
+        <input class="btn btn-primary" type="submit" value="글 작성" />
+      </form>
+    </div>
+    <div class="container">
+      {% if post.image %}
+      <img src="{{post.image.url}}" />
+      url : {{ post.photo.url }} # /media/jeju_pic.png
+      <br /><br />
+      {% endif %}
+    </div>
+    {% endblock %}
+
+    <br />
     {% if user.is_authenticated %}
     <div class="form">
       <h2 class="title">피부 유형 진단</h2>
