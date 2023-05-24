@@ -51,7 +51,7 @@ def mypage(request):
         post = Post()
         post.image = request.FILES['image']
         post.save()
-        return redirect('/mypage',{'post':post})
+        return redirect('/mypage')
     else:
         post = Post()
         return render(request,'mypage.html',{'post':post})

@@ -56,7 +56,6 @@
                   {% csrf_token %}
                   <input name="image" type="file" />
               </div>
-
               <div class="container">
                 {% if post.image %}
                 <img src="{{post.image.url}}" />
