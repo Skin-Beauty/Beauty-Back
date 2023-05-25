@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/css/homePage.css" />
-    <link rel="stylesheet" href="/static/css/content.css" />
+    <link rel="stylesheet" href="/static/css/category.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,6 +54,7 @@
         <li><a href="{% url 'allcontent' %}"> 추천제품</a></li>
       </ul>
     </nav>
+
     <div id="category_wrapper">
       <figure class="all">
         <img  src="/static/icons/cosmetic.svg" alt="" />
@@ -80,6 +81,11 @@
         <figcaption>바디<figcaption>
       </figure>
 		</div>
+    {% if user.is_authenticated %}
+    <div class="userSkinType">
+      {{user.username}}님의 피부타입은 <span>여드름성</span> 피부입니다.
+      {%else %} {%endif%}
+    </div>
     <div class="itemList skinItemList hide">
       <div class="wrapper">
         <img class="image" src="/static/data/skin01.jpg"/>
