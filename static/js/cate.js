@@ -19,40 +19,55 @@ const bodyItemList = document.querySelector(".bodyItemList");
 
 const allEvent = (target) => {
   if (!target.classList.contains("all")) return;
-  if (document.querySelector(".wrapper") !== null) {
-    document.querySelector(".itemList").innerHTML = "";
-  }
+  skinList.classList.remove("hide");
+  maskList.classList.remove("hide");
+  makeupList.classList.remove("hide");
+  suncareList.classList.remove("hide");
+  bodyItemList.classList.remove("hide");
 };
 
 const skinEvent = (target) => {
   if (!target.classList.contains("skin")) return;
-  itemList.classList.add(".hide");
+  skinList.classList.remove("hide");
+  maskList.classList.add("hide");
+  makeupList.classList.add("hide");
+  suncareList.classList.add("hide");
+  bodyItemList.classList.add("hide");
 };
 
 const maskEvent = (target) => {
   if (!target.classList.contains("mask")) return;
-  if (document.querySelector(".wrapper") !== null) {
-    document.querySelector(".itemList").innerHTML = "";
-  }
+  skinList.classList.add("hide");
+  makeupList.classList.add("hide");
+  suncareList.classList.add("hide");
+  bodyItemList.classList.add("hide");
+  maskList.classList.remove("hide");
 };
 
 const makeupEvent = (target) => {
   if (!target.classList.contains("makeup")) return;
-  if (document.querySelector(".wrapper") !== null) {
-    document.querySelector(".itemList").innerHTML = "";
-  }
+  maskList.classList.add("hide");
+  skinList.classList.add("hide");
+  suncareList.classList.add("hide");
+  bodyItemList.classList.add("hide");
+  skinList.classList.add("hide");
+  makeupList.classList.remove("hide");
 };
 
 const suncareEvent = (target) => {
   if (!target.classList.contains("suncare")) return;
-  if (document.querySelector(".wrapper") !== null) {
-    document.querySelector(".itemList").innerHTML = "";
-  }
+  maskList.classList.add("hide");
+  makeupList.classList.add("hide");
+  skinList.classList.add("hide");
+  bodyItemList.classList.add("hide");
+  suncareList.classList.remove("hide");
 };
 
 const bodyEvent = (target) => {
   if (!target.classList.contains("body")) return;
-  if (document.querySelector(".wrapper") !== null) {
-    document.querySelector(".itemList").innerHTML = "";
-  }
+  maskList.classList.add("hide");
+  makeupList.classList.add("hide");
+  suncareList.classList.add("hide");
+  skinList.classList.add("hide");
+  bodyItemList.classList.remove("hide");
 };
