@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/static/css/allcontent.css" />
+    <link rel="stylesheet" href="/static/css/all.css" />
     <link rel="stylesheet" href="/static/css/homePage.css" />
     <link rel="stylesheet" href="/static/css/content.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -53,6 +53,12 @@
           <input class="searchbtn" type="image" src="/static/img/search.png" />
         </div>
       </section>
+
+      {% if user.is_authenticated %}
+      <div class="userSkinType">
+        {{user.username}}님의 피부타입은 <span>여드름성</span> 피부입니다.
+        {%else %} {%endif%}
+      </div>
       <div id="category_wrapper">
         <a href="{% url 'content' %}" class="all">
           <img src="/static/icons/cosmetic.svg" alt="" />
