@@ -174,3 +174,6 @@ a {
 .contents .upload-box .file {
   display: none;
 }
+.hidden {
+  display: none;
+}

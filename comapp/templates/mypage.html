@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beauty Skin</title>
-    <link rel="stylesheet" href="/static/css/my.css" />
+    <link rel="stylesheet" href="/static/css/mypage.css" />
   </head>
   <body>
     <header>
@@ -50,31 +50,21 @@
                 class="image"
               />
               <p class="message">Drag files to upload</p>
-              {% block content %}
-              <div class="container">
-                <form method="POST" enctype="multipart/form-data">
-                  {% csrf_token %}
-                  <input name="image" type="file" />
-              </div>
-              <div class="container">
-                {% if post.image %}
-                <img src="{{post.image.url}}" />
-                url : {{ post.photo.url }}
-                <br /><br />
-                <div class="type_wrapper">
-                  <h2>내 피부 MBTI</h2>
-                  <span>여드름성 피부</span>
-                </div>
-                {% endif %}
-              </div>
-              {% endblock %}
+              <input name="image" type="file" />
             </div>
             <input
-            class="btn btn-primary file-label"
-            type="submit"
-            value="진단하기"
-          />
-        </form>
+              class="btn btn-primary file-label"
+              type="submit"
+              value="진단하기"
+            />
+          </div>
+          <div class="container hidden">
+            <img src="/static/img/navLogo.svg" />
+            <br /><br />
+            <div class="type_wrapper">
+              <h2>내 피부 MBTI</h2>
+              <span>여드름성 피부</span>
+            </div>
           </div>
         </div>
       </div>
