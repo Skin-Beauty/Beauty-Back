@@ -47,11 +47,14 @@ def addpost(request):
 
 #MYPAGE
 def mypage(request):
-    if request.method=="POST":
-        post = Post()
-        post.image = request.FILES['image']
-        post.save()
-        return redirect('/mypage')
-    else:
-        post = Post()
-        return render(request,'mypage.html',{'post':post})
+    return render(request,'mypage.html')
+
+# def mypage(request):
+#     if request.method=="POST":
+#         post = Post()
+#         post.image = request.FILES['image']
+#         post.save()
+#         return redirect('/mypage')
+#     else:
+#         post = Post()
+#         return render(request,'mypage.html',{'post':post})
