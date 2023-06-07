@@ -54,7 +54,11 @@
         <li><a href="{% url 'allcontent' %}"> 추천제품</a></li>
       </ul>
     </nav>
-
+    {% if user.is_authenticated %}
+    <div class="userSkinType">
+      {{user.username}}님의 피부타입은 <span>O A S</span> 피부입니다.
+      {%else %} {%endif%}
+    </div>
     <div id="category_wrapper">
       <figure class="all">
         <img  src="/static/icons/cosmetic.svg" alt="" />
@@ -81,11 +85,7 @@
         <figcaption>바디<figcaption>
       </figure>
 		</div>
-    {% if user.is_authenticated %}
-    <div class="userSkinType">
-      {{user.username}}님의 피부타입은 <span>여드름성</span> 피부입니다.
-      {%else %} {%endif%}
-    </div>
+
     <div class="itemList skinItemList hide">
       <div class="wrapper">
         <img class="image" src="/static/data/skin01.jpg"/>
